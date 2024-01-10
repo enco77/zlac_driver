@@ -11,7 +11,7 @@ class Zlac_Driver():
         self.port = rospy.get_param('port', default='/dev/RS485')
         self.freq = rospy.get_param('freq', default=30)
         self.ppr = rospy.get_param('ppr', default=1024)
-        self.wheel_radius = rospy.get_param('wheel_radius', default=0.08255)
+        self.wheel_radius = rospy.get_param('wheel_radius', default=0.085)
         self.wheelbase = rospy.get_param('wheelbase', default=0.28)
         self.control_mode = rospy.get_param('control_mode', default=3)
         self.accel_time = rospy.get_param('accel_time', default=1000)
