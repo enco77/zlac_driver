@@ -49,7 +49,7 @@ class Zlac_Driver():
         self.driver.set_rpm(left_speed_rpm, right_speed_rpm)
 
     def calculate_right_speed(self, x, z):
-        return (2 * x - z * self.wheelbase) / (2 * self.wheel_radius)
+        return -(2 * x - z * self.wheelbase) / (2 * self.wheel_radius)
 
     def calculate_left_speed(self, x, z):
         return (2 * x + z * self.wheelbase) / (2 * self.wheel_radius)
