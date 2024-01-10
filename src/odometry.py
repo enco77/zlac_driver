@@ -9,12 +9,12 @@ from geometry_msgs.msg import Quaternion, TransformStamped
 
 class ZLACOdometry():
     def __init__(self) -> None:
-        self.ppr = rospy.get_param('ppr', default=1024)
-        self.wheel_radius = rospy.get_param('wheel_radius', default=0.085)
-        self.wheelbase = rospy.get_param('wheelbase', default=0.28)
-        self.publish_tf = rospy.get_param('publish_tf', default = False)
-        self.odom_frame = rospy.get_param('odom_frame', default = 'odom')
-        self.base_frame = rospy.get_param('base_frame', default = 'base_link')
+        self.ppr = rospy.get_param('~ppr', default=1024)
+        self.wheel_radius = rospy.get_param('~wheel_radius', default=0.085)
+        self.wheelbase = rospy.get_param('~wheelbase', default=0.28)
+        self.publish_tf = rospy.get_param('~publish_tf', default = False)
+        self.odom_frame = rospy.get_param('~odom_frame', default = 'odom')
+        self.base_frame = rospy.get_param('~base_frame', default = 'base_link')
 
         self.last_time = rospy.Time.now()
         self.ticks_meter = (self.ppr * 4) / (2 * math.pi * self.wheel_radius)
