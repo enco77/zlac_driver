@@ -23,7 +23,7 @@ class Zlac_Driver():
         self.driver = Controller(self.port, self.wheel_radius, self.driver_id)
 
         rospy.Subscriber('cmd_vel', Twist, self.cmd_callback)
-        self.ticks_publisher = rospy.Publisher('~encoder/ticks', TicksStamped, queue_size=10)
+        self.ticks_publisher = rospy.Publisher('encoder/ticks', TicksStamped, queue_size=10)
         self.ticks_seq = 0
         self.fault_seq = 0
 
