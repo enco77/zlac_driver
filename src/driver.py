@@ -85,7 +85,7 @@ if __name__ == '__main__':
     while not rospy.is_shutdown():
         try:
             zlac_md.pub_encoder_ticks()
-            zlac_md.pub_driver_status()
+            # zlac_md.pub_driver_status()
             zlac_md.rate.sleep()
         except rospy.ROSInterruptException:
             zlac_md.disable_driver()
