@@ -70,7 +70,7 @@ class Zlac_Driver():
         ticks.header.stamp.secs = current_time.secs
         ticks.header.seq = self.ticks_seq
         l_ticks, r_ticks = self.driver.get_wheels_tick()
-        ticks.ticks.L_tick, ticks.ticks.R_tick = -l_ticks, r_ticks
+        ticks.ticks.L_tick, ticks.ticks.R_tick = l_ticks, -r_ticks
         self.ticks_publisher.publish(ticks)
         self.ticks_seq += 1
 
