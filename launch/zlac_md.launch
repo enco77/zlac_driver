@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="output"                default="screen" />
+
+    <node name="zlac_md"  pkg="zlac_driver" type="driver.py"  required='true'>
+        <rosparam command="load" file="$(find zlac_driver)/config/driver.yaml" />
+    </node>
+
+    <node name="zlac_odom"  pkg="zlac_driver" type="odometry.py"  required='true'>
+        <rosparam command="load" file="$(find zlac_driver)/config/odometry.yaml" />
+    </node>
+
+</launch>
