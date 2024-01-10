@@ -1,0 +1,6 @@
+wheel_radius: 0.085
+wheelbase: 0.28
+ppr: 1024
+publish_tf: true
+odom_frame: 'odom'
+base_frame: 'base_link'

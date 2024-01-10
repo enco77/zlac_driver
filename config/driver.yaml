@@ -1,0 +1,9 @@
+port: '/dev/RS485'
+freq: 30
+wheel_radius: 0.085
+wheelbase: 0.28
+control_mode: 3
+accel_time: 1000
+decel_time: 1000
+driver_id: 1
+max_rpm: 260
