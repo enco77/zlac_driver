@@ -147,7 +147,7 @@ class Controller:
 
 	def get_fault_code(self):
 
-		fault_codes = self.client.read_holding_registers(self.L_FAULT, 2, unit=self.ID)
+		fault_codes = self.modbus_fail_read_handler(self.L_FAULT, 2)
 
 		L_fault_code = fault_codes.registers[0]
 		R_fault_code = fault_codes.registers[1]
