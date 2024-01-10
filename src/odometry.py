@@ -30,7 +30,7 @@ class ZLACOdometry():
 
     def encoder_callback(self, msg:TicksStamped):
         self.current_time = rospy.Time.now()
-        left = -msg.ticks.L_tick
+        left = msg.ticks.L_tick
         right = msg.ticks.R_tick
 
         if (self.init == False):
