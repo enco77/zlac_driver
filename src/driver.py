@@ -55,7 +55,7 @@ class Zlac_Driver():
         return (2 * x + z * self.wheelbase) / (2 * self.wheel_radius)
 
     def to_rpm(self, value):
-        return self.max_limit((value * 60) / (2 * math.pi))
+        return int(self.max_limit((value * 60) / (2 * math.pi)))
 
     def max_limit(self, speed):
         if (speed > 0):
