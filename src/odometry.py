@@ -54,8 +54,8 @@ class ZLACOdometry():
         x = math.cos(th) * d
         y = math.sin(th) * d
 
-        self.x_final = self.x_final + ( math.cos(self.theta_final) * x - math.sin(self.theta_final) * y)
-        self.y_final = self.y_final + ( math.sin(self.theta_final) * x + math.cos(self.theta_final) * y)
+        self.x_final = self.x_final + ( math.cos(self.theta_final) * x + math.sin(self.theta_final) * y)
+        self.y_final = self.y_final + ( math.sin(self.theta_final) * x - math.cos(self.theta_final) * y)
 
         self.theta_final = self.theta_final + th
 
