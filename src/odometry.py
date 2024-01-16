@@ -45,7 +45,7 @@ class ZLACOdometry():
         self.enc_right = right
 
         d = (d_left + d_right) / 2.0
-        th = (d_right - d_left) / self.wheelbase
+        th = (d_left - d_right) / self.wheelbase
 
         elapsed = self.current_time.to_sec() - self.last_time.to_sec()
         dx = d / elapsed
@@ -54,8 +54,8 @@ class ZLACOdometry():
         x = math.cos(th) * d
         y = math.sin(th) * d
 
-        self.x_final = self.x_final + ( math.cos(self.theta_final) * x - math.sin(self.theta_final) * y)
-        self.y_final = self.y_final + ( math.sin(self.theta_final) * x + math.cos(self.theta_final) * y)
+        self.x_final = self.x_final + ( math.cos(self.theta_final) * x + math.sin(self.theta_final) * y)
+        self.y_final = self.y_final + ( math.sin(self.theta_final) * x - math.cos(self.theta_final) * y)
 
         self.theta_final = self.theta_final + th
 
